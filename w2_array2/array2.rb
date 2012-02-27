@@ -5,6 +5,15 @@ class Array2
     @elements = elements
   end
 
+  def Array2.[](*elements)
+    new(*elements)
+  end
+
+  def ==(other_object)
+    return false unless other_object.instance_of? Array2
+    elements == other_object.elements
+  end
+
   def length
     @elements.length
   end
